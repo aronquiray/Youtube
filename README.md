@@ -84,7 +84,8 @@ $videoList = Youtube::searchVideos('Android');
 $videoList = Youtube::searchChannelVideos('keyword', 'UCk1SpWNzOs4MYmr0uICEntg', 40);
 
 // List videos in a given channel, return an array of PHP objects
-$videoList = Youtube::listChannelVideos('UCk1SpWNzOs4MYmr0uICEntg', 40);
+// Second parameters would be completed/live/upcoming
+$videoList = Youtube::listChannelVideos('UCk1SpWNzOs4MYmr0uICEntg', 'live');
 
 $results = Youtube::searchAdvanced([ /* params */ ]);
 
