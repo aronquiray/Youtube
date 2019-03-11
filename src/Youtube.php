@@ -260,13 +260,14 @@ class Youtube
      * @param  $pageInfo
      * @return array
      */
-    public function listChannelVideos($channelId, $maxResults = 10, $order = null, $part = ['id', 'snippet'], $pageInfo = false)
+    public function listChannelVideos($channelId, $eventType = 'live', $maxResults = 10, $order = null, $part = ['id', 'snippet'], $pageInfo = false)
     {
         $params = [
             'type' => 'video',
             'channelId' => $channelId,
             'part' => implode(', ', $part),
             'maxResults' => $maxResults,
+            'eventType' => $eventType,
         ];
         if (!empty($order)) {
             $params['order'] = $order;
